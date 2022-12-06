@@ -1,0 +1,64 @@
+
+main {
+  min-height: 100vh;
+}
+
+footer {
+  background-color: $darkGray;
+  color: white;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  @include flex(column, flex-start, center);
+
+}
+
+.some {
+  margin-top: 1rem;
+  @include flex(row, center, flex-start);
+  gap: 2rem;
+
+  i {
+    font-size: 1.5rem;
+  }
+
+  i:hover {
+    color: $pink;
+  }
+}
+
+.footer-nav {
+  margin-top: 2rem;
+  @include small-text;
+  @include flex(row, center, center);
+  gap: 1rem;
+  list-style: none;
+
+  
+  li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    color: $pink;
+  }
+}
+
+footer p {
+  margin-top: 1rem;
+  font-family: $body-font;
+  font-size: .7rem
+}
+.contact-info {
+  @include flex(row, center, center);
+  gap: 1rem;
+  text-decoration: none;
+}
+
+.footer-logo {
+  width: 100px;
+  height: 100px;
+}

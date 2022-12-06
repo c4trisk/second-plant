@@ -1,0 +1,54 @@
+@mixin for-tablet {
+  @media (min-width: 481px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin for-desktop {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin large-heading {
+  font-family: $heading-font;
+  font-size: $large-heading-font-size;
+  font-weight: 700;
+}
+
+@mixin heading {
+  font-family: $heading-font;
+  font-size: $heading-font-size;
+  font-weight: 700;
+  line-height: 1.8rem;
+}
+
+@mixin body {
+  font-family: $body-font;
+  font-size: $body-font-size;
+  font-weight: 500;
+  line-height: 1.2rem;
+}
+
+@mixin small-text {
+  font-family: $body-font;
+  font-size: $small-font-size;
+}
+
+@mixin btn($btn-color) {
+  background-color: $btn-color;
+  border: $border-black;
+  color: white;
+  font-family: $body-font;
+  font-size: $btn-font-size;
+  font-weight: bold;
+  width: 16rem;
+  height: 4rem;
+}

@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 100vw;
+  color: white;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  padding-top: 1rem;
+  @include flex(column, flex-start, center);
+  
+}
+
+.menu {
+  align-self: flex-end;
+  padding-right: 1rem;
+}

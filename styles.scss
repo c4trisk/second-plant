@@ -1,0 +1,215 @@
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/header";
+@import "partials/footer";
+
+body {
+  width: 100vw;
+}
+
+// Masthead
+.masthead {
+  color: white;
+  width: 100vw;
+  height: 83vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include for-tablet {
+    height: 70vh;
+  }
+
+  @include for-desktop {
+    height: 60vh;
+  }
+}
+
+.masthead-img {
+  height: 83vh;
+  width: 100%;
+  object-fit: cover;
+
+  @include for-tablet {
+    height: 70vh;
+  }
+  
+  @include for-desktop {
+    height: 60vh;
+  }
+}
+
+.masthead-content {
+  @include flex(column, space-evenly, center);
+  position: absolute;
+  top: 0;
+}
+
+.name {
+  margin-top: 20vh;
+
+  @include for-tablet {margin-top: 15vh;}
+  @include for-desktop {margin-top: 5vh;}
+}
+
+.catchphrase {
+  @include small-text;
+  margin-top: .5rem;
+}
+
+.logo-img {
+  margin-top: 1rem;
+  width: 40%;
+
+  @include for-tablet {
+    width: 30%;
+  }
+
+  @include for-desktop {
+    width: 10%;
+  }
+}
+
+.btn {
+  @include btn($darkGray);
+}
+
+.btn:hover {
+  background-color: $black;
+}
+
+.masthead-btn {
+  margin-top: 10vh;
+  @include for-desktop{margin-top: 5vh;}
+}
+
+// Page Content
+
+.pink {
+  background-color: $pink;
+  padding-top: 2rem;
+  @include flex(row, flex-end, flex-start);
+}
+
+.text-area {
+  background-color: rgb(255, 255, 255);
+  
+  p {
+    @include body;
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+
+    @include for-desktop {
+      margin-bottom: 3rem;
+      margin-right: 3rem;
+    }
+  }
+}
+
+.right-aligned {
+  width: 82%;
+  border-left: $border-black;
+  border-top: $border-black;
+  padding-left: 2.2rem;
+  padding-top: 2rem;
+}
+
+.text-heading {
+  @include heading;
+}
+
+// Product links
+
+.white {
+  @include flex(row, center, center);
+  padding: 2rem;
+}
+.section-heading {
+  @include large-heading;
+}
+
+.product-groups {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  @include for-desktop {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+}
+
+.product {
+  background-image: url(./images/pattern.PNG);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  @include flex(column, center, center);
+  padding: 2rem;
+  margin-bottom: 1rem;
+
+}
+
+.product-btn {
+  margin-top: -1.8rem;
+  
+} 
+
+.product:nth-of-type(2) {
+  background: white;
+}
+
+.product-wrapper {
+  height: 19rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+
+  figcaption {
+    @include heading;
+    white-space: pre;
+    writing-mode: vertical-rl;
+  }
+}
+.product-img {
+  width: 248px;
+  height: 321px;
+  object-fit: cover;
+  border: $border-black;
+}
+
+// Bottom QA
+
+.questions {
+  background-color: $pink;
+  padding-top: 2rem;
+  @include flex(column, center, flex-start);
+
+  h2 {
+    align-self: center;
+    margin-bottom: 1rem;
+  }
+}
+
+.left-aligned {
+  width: 90%;
+  border-top: $border-black;
+  border-right: $border-black;
+  padding-top: 2rem;
+  padding-right: 1rem;
+  padding-left: 2.9rem;
+
+  p:last-of-type {
+    padding-bottom: 2rem;
+  }
+}
+
+.intext-link {
+  color: black;
+  font-weight: 700;
+}
