@@ -1,0 +1,205 @@
+.flex {
+  @include flex(row, center, center);
+}
+
+.contact {
+  background-color: $pink;
+  padding-top: 2rem;
+
+  .left-aligned {
+    width: 85%;
+    padding-left: 5rem;
+    padding-right: 2rem;
+  } 
+}
+
+.email {
+  width:80%; 
+  margin: auto;
+  @include flex(row, space-between, center);
+  border: $border-black; 
+  font-family: $body-font;
+  font-weight: 700;
+  font-size: 1.1em;
+  padding: 2rem;
+
+  i {
+    font-size: 1.5em;
+  }
+
+}
+
+.form-link {
+  @include heading;
+  font-weight: 500;
+  @include flex(row, center, center);
+  background-color: $pink;
+  border: $border-black;
+  width: 80%;
+  margin: auto;
+  margin-top: 1rem;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.link {
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.employees {
+  @include flex(column, center, center);
+}
+.employee-card {
+  width: 95%;
+  height: 280px;
+  @include flex(row, center, center);
+}
+
+.employee-card:nth-child(even) {
+  height: 370px;
+  background-image: url("./images/pattern-square.PNG");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  .employee-img {
+    order: 1;
+    border-right: none;
+    border-left: $border-black;
+  }
+
+  h3 {text-align: right;}
+  p {text-align: left;}
+}
+
+.card {
+  width: 90%;
+  background-color: white;
+  border: $border-black;
+  @include flex(row, space-between, center);
+}
+.employee-img {
+  width: 128px;
+  height: 207px;
+  object-fit: cover;
+  border-right: $border-black;
+}
+
+.employee-details {
+  width: 100%;
+  height: 207px;
+  padding: 1rem;
+  border: 1px solid rgb(106, 196, 106);
+  @include small-text;
+  @include flex(column, space-between, center);
+
+  .detail-up {
+    width: 100%;
+    @include heading;
+  }
+
+  .detail-down {
+    width: 100%;
+    text-align: right;
+    @include small-text;
+
+    p:first-of-type {
+      @include body;
+      font-weight: 700;
+    }
+  }
+}
+
+.form-container {
+  background-color: $pink;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.form {
+  @include flex(column, flex-start, flex-start);
+  gap: 1rem;
+  background-color: white;
+  border: $border-black;
+  padding: 2rem 1.5rem;
+
+  h2 {
+    align-self: flex-end;
+    text-align: right;
+    width: 70%;
+    margin-bottom: 1rem;
+  }
+}
+
+.input-group {
+  width: 100%;
+  @include body;
+
+  label {
+    font-weight: 700;
+    margin-bottom: 5rem;
+  }
+
+  label[for="robot"] {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  input, textarea {
+    @include body;
+    border: $border-black;
+    padding: 1rem;
+  }
+
+  input:not([type="checkbox"]), textarea {
+    margin-top: .5rem;
+    width: 100%;
+  }
+
+  #message {
+    height: 15rem;
+    resize: none;
+  }
+}
+
+input[type=checkbox] {
+  position: relative;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+input[type=checkbox]:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  border: $border-black;
+  background-color: white;
+}
+input[type=checkbox]:checked:after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 10px;
+  border: solid $green;
+  border-width: 0 4px 4px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 2px;
+  left: 6px;
+}
+
+form .btn {
+  margin-top: 1.5rem;
+  width: 100%;
+  background-color: $green;
+}
+
+form .btn:hover {
+  background-color: $darkGreen;
+}

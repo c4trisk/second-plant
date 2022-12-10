@@ -1,0 +1,179 @@
+.store {
+  background-color: $pink;
+  @include flex(column, flex-start, flex-end);
+  padding-top: 1rem;
+
+  h1 {
+    align-self: center;
+    margin-bottom: 1rem;
+  }
+}
+
+// ACCORDION MENU
+
+.accordion {
+  @include heading;
+  background-color: white;
+  border-bottom: $border-black;
+  border-top: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+  transition: .4s;
+  @include flex(row, space-between, center);
+
+  i {
+    font-size: 1.2rem;
+  }
+}
+
+.accordion:first-of-type {
+  margin-top: 2rem;
+  border-top: $border-black;
+}
+
+.active, .accordion:hover {
+  background-color: $lightGray;
+
+  i {
+    transform: rotate(90deg);
+  }
+}
+
+.panel {
+  width: 100%;
+  padding: 1.5rem 0;
+  display: none;
+  overflow: hidden;
+  border-bottom: $border-black;
+}
+
+.products {
+  width: 100%;
+  @include flex(row, center, flex-start);
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+
+.product-1 {
+  border: $border-black;
+  width: 352px;
+
+
+  .product-container-top {
+    @include flex(row, space-between, center);
+  }
+}
+
+.plant-img {
+  width: 65%;
+  height: 324px;
+  object-fit: cover;
+  border-right: $border-black;
+  border-bottom: $border-black;
+}
+
+.plant-stats {
+  height: 324px;
+  width: 100%;
+  @include flex(column, space-around, center);
+}
+
+.skill {
+  @include flex(column, center, center);
+}
+
+.filled-level, .unfilled-level {
+  padding-top: .6rem;
+  padding-bottom: .6rem;
+  padding-left: .2rem;
+  padding-right: .2rem;
+  font-size: 1.2rem;
+  color: $lightGray;
+}
+
+.filled-level {
+  color: $green;
+}
+
+.stat-category {
+  @include body;
+  font-weight: 700;
+}
+
+.level {
+  @include small-text;
+}
+
+.plant-info {
+  @include flex(column, flex-start, flex-start);
+  padding: 1em;
+}
+.plant-latin {
+  @include body;
+  font-weight: 300;
+  margin-bottom: .3em;
+}
+
+.plant-heading {
+  font-family: $body-font;
+  font-size: 1.3rem;
+  margin-bottom: .3em;
+}
+
+.plant-desc {
+  @include body;
+  margin-bottom: .5em;
+  height: 130px;
+  overflow: scroll;
+}
+
+//SCROLLBAR
+ 
+::-webkit-scrollbar {
+  width: 5px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $lightGray;
+  opacity: .5;
+  border-radius: 5px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $darkGray;
+} 
+
+.price {
+  @include large-heading;
+  align-self: flex-end;
+  margin-bottom: .5rem;
+}
+
+.btn-buy {
+  background-color: $green;
+  border: $border-black;
+  outline: none;
+  color: white;
+  font-family: $body-font;
+  font-size: $btn-font-size;
+  font-weight: 700;
+  width: 352px;
+  height: 4rem;
+  margin-top: -1.22rem;
+}
+
+.btn-buy:hover {
+  background-color: $darkGreen;
+}
+

@@ -1,7 +1,16 @@
 @import "partials/variables";
 @import "partials/mixins";
 @import "partials/header";
+@import "partials/store";
+@import "partials/contact";
 @import "partials/footer";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
 body {
   width: 100vw;
@@ -29,6 +38,7 @@ body {
   height: 83vh;
   width: 100%;
   object-fit: cover;
+  margin-top: -50px;
 
   @include for-tablet {
     height: 70vh;
@@ -39,10 +49,11 @@ body {
   }
 }
 
+// HITT ETT SÄTT SÅ HE INT FUCKAR ME HEADERRN!!!
 .masthead-content {
   @include flex(column, space-evenly, center);
-  position: absolute;
-  top: 0;
+  // position: absolute;
+  // top: 50px;
 }
 
 .name {
@@ -112,6 +123,7 @@ body {
   border-top: $border-black;
   padding-left: 2.2rem;
   padding-top: 2rem;
+  padding-right: 1rem;
 }
 
 .text-heading {
@@ -143,7 +155,7 @@ body {
 }
 
 .product {
-  background-image: url(./images/pattern.PNG);
+  background-image: url(./images/pattern-square.PNG);
   background-size: contain;
   background-repeat: no-repeat;
   padding-top: 2rem;

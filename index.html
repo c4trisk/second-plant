@@ -12,20 +12,36 @@
 <body>
 
   <header>
-    <div class="header">
-      <nav class="menu">Menu</nav>
-    </div>
+    <nav class="top-nav nav-homepage">
+      <a href="index.html"><div class="logo">
+        <img src="./images/logo-black.PNG" alt="Logo">
+        <p>SECOND PLANT</p>
+      </div></a>
+      <input id="menu-toggle" type="checkbox" />
+      <label class='menu-button-container' for="menu-toggle">
+      <div class='menu-button'></div>
+    </label>
+      <ul class="menu">
+        <li><a href="./store.html">Store</a></li>
+        <li><a href="./faq.html">FAQ</a></li>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="#">Log In</a></li>
+      </ul>
+    </nav>
   </header>
+    
+  
   
   <main>
     <div class="masthead">
       <img src="./images/cover2.jpg" alt=" " class="masthead-img">
-      <div class="masthead-content">
+      <!-- <div class="masthead-content">
         <h1 class="name">SECOND PLANT</h1>
         <p class="catchphrase">RELOCATING PLANTS SINCE 2022</p>
         <img src="./images/logo.png" alt="logo" class="logo-img">
         <button class="btn masthead-btn">LOOK AT PLANTS</button>
-      </div>
+      </div> -->
     </div>
     <div class="pink">
       <div class="text-area right-aligned">
@@ -34,7 +50,7 @@
       </div>
     </div>
     <div class="white">
-      <h2 class="section-heading">FOR SALE</h2>
+      <h2 class="section-heading">STORE</h2>
     </div>
     <div class="product-groups">
       <div class="product">
@@ -93,6 +109,6 @@
     </div>
     <p>© Second Plant 2022</p>
   </footer>
-
+  <script src="script.js"></script>
 </body>
 </html> 
